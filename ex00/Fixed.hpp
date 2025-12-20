@@ -3,15 +3,18 @@
 
 class Fixed
 {
+	static const int _rawBits;
+	
 	private:
-		static const int _rawBits;
 		int	_fp;
 	public:
 		Fixed();
 		~Fixed();
-		Fixed(const Fixed& other);
+		Fixed(const Fixed& original);
+		Fixed& operator=(const Fixed& original);
 
 		int getRawBits() const;
+		void setRawBits(int const raw);
 };
 
 #endif
