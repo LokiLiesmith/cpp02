@@ -4,11 +4,14 @@
 class Fixed
 {
 	private:
-		static const int bits;
+		static const int _rawBits;
 		int	_fp;
 	public:
 		Fixed();
 		~Fixed();
+		Fixed(const Fixed& other);
+
+		int getRawBits() const;
 };
 
 #endif
