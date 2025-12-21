@@ -1,0 +1,33 @@
+#ifndef FIXED_HPP
+#define FIXED_HPP
+
+# include <iostream>
+
+class	Fixed
+{
+	private:
+		static const int _frBits;
+		int _fp;
+	
+	public:
+		Fixed();
+		~Fixed();
+		Fixed(const Fixed& original);
+
+		Fixed(float f);
+		Fixed(int n);
+
+		Fixed& operator= (const Fixed& original);
+
+		float	toFloat(void) const;
+		int		toInt(void) const;
+
+		int		getRawBits() const;
+		void	setRawBits(const int raw);
+};
+
+
+#endif
+
+
+std::ostream& operator<<(std::ostream& out, const Fixed& Fixed);
