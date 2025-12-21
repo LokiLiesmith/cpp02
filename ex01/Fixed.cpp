@@ -47,7 +47,6 @@ int	Fixed::toInt(void) const
 	return (_fp >> _frBits);
 }
 
-
 int Fixed::getRawBits()const
 {
 	return (_fp);
@@ -57,5 +56,4 @@ void Fixed::setRawBits(const int raw)
 {
 	_fp = raw;
 }
-
 
