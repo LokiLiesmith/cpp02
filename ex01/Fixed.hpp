@@ -6,7 +6,7 @@
 /*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 03:55:47 by mrazem            #+#    #+#             */
-/*   Updated: 2025/12/21 03:55:47 by mrazem           ###   ########.fr       */
+/*   Updated: 2025/12/21 04:21:56 by mrazem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ class	Fixed
 		void	setRawBits(const int raw);
 };
 
+std::ostream& operator<<(std::ostream& out, const Fixed& Fixed);
 
 #endif
 
 
-std::ostream& operator<<(std::ostream& out, const Fixed& Fixed);

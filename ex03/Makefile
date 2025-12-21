@@ -6,15 +6,15 @@
 #    By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/21 04:18:33 by mrazem            #+#    #+#              #
-#    Updated: 2025/12/21 04:51:11 by mrazem           ###   ########.fr        #
+#    Updated: 2025/12/21 21:15:45 by mrazem           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX			:= c++
 CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
-SRC			:= main.cpp Fixed.cpp
-NAME		:= overloaded 
+SRC			:= main.cpp Fixed.cpp Point.cpp bsp.cpp
+NAME		:= bsp
 OBJDIR		:= obj
 OBJ			:= $(SRC:%.c=$(OBJDIR)/%.o)
 
