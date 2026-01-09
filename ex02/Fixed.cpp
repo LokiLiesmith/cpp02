@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/09 13:27:42 by mrazem            #+#    #+#             */
+/*   Updated: 2026/01/09 14:33:19 by mrazem           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 #include <cmath>
 
@@ -52,6 +64,13 @@ Fixed Fixed::operator-(const Fixed& sub) const
 	return result;
 }
 
+Fixed Fixed::operator/(const Fixed& div) const
+{
+	Fixed result;
+
+	result.setRawBits(((getRawBits() << (_frBits)) / div.getRawBits()));
+	return result;
+}
 
 
 // INCREMENT / DECREMENT
@@ -153,6 +172,12 @@ const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
 		return a;
 	return b;	
 }
+
+int	Fixed::toInt(void) const
+{
+	return (_fp >> _frBits);
+}
+
 
 std::ostream& operator<<(std::ostream& out, const Fixed& stored)
 {

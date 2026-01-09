@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/09 13:27:46 by mrazem            #+#    #+#             */
+/*   Updated: 2026/01/09 14:33:15 by mrazem           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -21,6 +33,7 @@ class	Fixed
 		Fixed	operator*(const Fixed& factor) const;
 		Fixed	operator+(const Fixed& add) const;
 		Fixed	operator-(const Fixed& sub) const;
+		Fixed	operator/(const Fixed& div) const;
 		Fixed&	operator++();
 		Fixed	operator++(int);
 		Fixed&	operator--();

@@ -6,7 +6,7 @@
 /*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 00:46:06 by mrazem            #+#    #+#             */
-/*   Updated: 2025/12/22 00:46:06 by mrazem           ###   ########.fr       */
+/*   Updated: 2026/01/09 14:46:16 by mrazem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ Point::Point(const float x, const float y)
 {}
 
 Point::Point(const Point& original)
+	:	m_x(original.m_x),
+		m_y(original.m_y)
 {
-	*this = original;
 }
 
 Point::Point(const Fixed& x, const Fixed& y)
@@ -35,8 +36,7 @@ Point::Point(const Fixed& x, const Fixed& y)
 
 Point& Point::operator=(const Point& original)
 {
-	if (*this != original)
-	*this = original;
+	(void) original;
 	return (*this);
 }
 

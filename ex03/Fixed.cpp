@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 00:46:08 by mrazem            #+#    #+#             */
-/*   Updated: 2025/12/22 00:46:21 by mrazem           ###   ########.fr       */
+/*   Created: 2026/01/09 13:27:42 by mrazem            #+#    #+#             */
+/*   Updated: 2026/01/09 14:47:58 by mrazem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,13 @@ Fixed Fixed::operator-(const Fixed& sub) const
 	return result;
 }
 
+Fixed Fixed::operator/(const Fixed& div) const
+{
+	Fixed result;
+
+	result.setRawBits(((getRawBits() << (_frBits)) / div.getRawBits()));
+	return result;
+}
 
 
 // INCREMENT / DECREMENT
@@ -94,6 +101,7 @@ Fixed Fixed::operator--(int)
 	_fp -= 1;
 	return tmp;
 }
+
 
 //COMPARISON OPERATORS
 
@@ -164,6 +172,12 @@ const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
 		return a;
 	return b;	
 }
+
+int	Fixed::toInt(void) const
+{
+	return (_fp >> _frBits);
+}
+
 
 std::ostream& operator<<(std::ostream& out, const Fixed& stored)
 {

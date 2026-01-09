@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrazem <mrazem@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 00:46:17 by mrazem            #+#    #+#             */
-/*   Updated: 2025/12/22 00:46:17 by mrazem           ###   ########.fr       */
+/*   Created: 2026/01/09 13:27:46 by mrazem            #+#    #+#             */
+/*   Updated: 2026/01/09 14:47:56 by mrazem           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class	Fixed
 		Fixed	operator*(const Fixed& factor) const;
 		Fixed	operator+(const Fixed& add) const;
 		Fixed	operator-(const Fixed& sub) const;
+		Fixed	operator/(const Fixed& div) const;
 		Fixed&	operator++();
 		Fixed	operator++(int);
 		Fixed&	operator--();
